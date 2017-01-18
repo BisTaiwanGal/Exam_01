@@ -12,6 +12,7 @@ public class Profile extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Profile");
         tv = (TextView) findViewById(R.id.tv);
         btnAction1 = (Button) findViewById(R.id.btnAction1);
         btnAction1.setOnClickListener(new View.OnClickListener() {

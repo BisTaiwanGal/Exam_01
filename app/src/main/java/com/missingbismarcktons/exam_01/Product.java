@@ -2,12 +2,26 @@ package com.missingbismarcktons.exam_01;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class Product extends BaseActivity {
+    private TextView tv;
+    private Button btnAction1, btnAction2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("Product");
+        tv = (TextView) findViewById(R.id.tv);
+        btnAction1 = (Button) findViewById(R.id.btnAction1);
+        btnAction1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog("目前沒有產品", "將於稍後提供服務");
+            }
+        });
     }
 
     public int getLayoutResource(){
