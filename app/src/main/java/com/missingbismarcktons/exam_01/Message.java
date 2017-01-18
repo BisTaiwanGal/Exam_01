@@ -6,20 +6,16 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 public class Message extends BaseActivity {
-    private TextView tv;
-    private Button btnAction1, btnAction2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Message");
-        tv = (TextView) findViewById(R.id.tv);
-        btnAction1 = (Button) findViewById(R.id.btnAction1);
-        btnAction1.setOnClickListener(new View.OnClickListener() {
+        setTextBtn1("動作一 : 點點看");
+        setTextBtn2("動作二 : 無");
+        getBtn1().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getApplicationContext(), Message.class);
@@ -42,7 +38,5 @@ public class Message extends BaseActivity {
         });
     }
 
-    public int getLayoutResource(){
-        return R.layout.activity_message;
-    }
+    //public int getLayoutResource(){return R.layout.activity_message;}
 }

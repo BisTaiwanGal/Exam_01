@@ -6,36 +6,31 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Profile extends BaseActivity {
-    private TextView tv;
-    private Button btnAction1, btnAction2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Profile");
-        tv = (TextView) findViewById(R.id.tv);
-        btnAction1 = (Button) findViewById(R.id.btnAction1);
-        btnAction1.setOnClickListener(new View.OnClickListener() {
+        setTextBtn1("動作一 : 改變訊息背景顏色");
+        setTextBtn2("動作二 : 改變訊息內容");
+        getBtn1().setOnClickListener(new View.OnClickListener() {
             private boolean stateChanged = true;
             @Override
             public void onClick(View v) {
                 if(stateChanged)
-                    changeTvBackgroundColor(tv, R.color.lightBlue);
+                    changeTvBackgroundColor(R.color.lightBlue);
                 else
-                    changeTvBackgroundColor(tv, android.R.color.transparent);
+                    changeTvBackgroundColor(android.R.color.transparent);
                 stateChanged = !stateChanged;
             }
         });
-        btnAction2 = (Button) findViewById(R.id.btnAction2);
-        btnAction2.setOnClickListener(new View.OnClickListener() {
+        getBtn2().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                changeTvContent(tv, "好想吃牛排");
+                changeTvContent("好想吃牛排");
             }
         });
 
     }
-    public int getLayoutResource(){
-        return R.layout.activity_profile;
-    }
+    //public int getLayoutResource(){return R.layout.activity_profile;}
 }

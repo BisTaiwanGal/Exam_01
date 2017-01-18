@@ -7,16 +7,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Product extends BaseActivity {
-    private TextView tv;
-    private Button btnAction1, btnAction2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTitle("Product");
-        tv = (TextView) findViewById(R.id.tv);
-        btnAction1 = (Button) findViewById(R.id.btnAction1);
-        btnAction1.setOnClickListener(new View.OnClickListener() {
+        setTextBtn1("動作一 : 顯示alertDialog");
+        setTextBtn2("動作二 : 無");
+        getBtn1().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertDialog("目前沒有產品", "將於稍後提供服務");
@@ -24,7 +22,5 @@ public class Product extends BaseActivity {
         });
     }
 
-    public int getLayoutResource(){
-        return R.layout.activity_product;
-    }
+    //public int getLayoutResource(){return R.layout.activity_product;}
 }

@@ -13,15 +13,20 @@ import android.support.v7.widget.Toolbar;
 
 public abstract class BaseActivity extends AppCompatActivity {
     //private Toolbar toolbar;
+    private TextView tv;
+    private Button btnAction1, btnAction2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(getLayoutResource());
+        setContentView(R.layout.activity_base);
         //configureToolbar();
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        tv = (TextView) findViewById(R.id.tv);
+        btnAction1 = (Button) findViewById(R.id.btnAction1);
+        btnAction2 = (Button) findViewById(R.id.btnAction2);
     }
-    protected abstract int getLayoutResource();
+    //protected abstract int getLayoutResource();
 
     /*private void configureToolbar() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -30,7 +35,18 @@ public abstract class BaseActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }*/
-
+    public void setTextBtn1(String s){
+        btnAction1.setText(s);
+    }
+    public void setTextBtn2(String s){
+        btnAction2.setText(s);
+    }
+    public Button getBtn1(){
+        return btnAction1;
+    }
+    public Button getBtn2(){
+        return btnAction2;
+    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -47,11 +63,11 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public void changeTvBackgroundColor(TextView t, int color){
-        t.setBackgroundResource(color);
+    public void changeTvBackgroundColor(int color){
+        tv.setBackgroundResource(color);
     }
-    public void changeTvContent(TextView t, String s){
-        t.setText(s);
+    public void changeTvContent(String s){
+        tv.setText(s);
     }
     public void alertDialog(String title, String message){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
