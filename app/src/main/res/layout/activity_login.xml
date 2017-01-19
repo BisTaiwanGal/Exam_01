@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- "xmlns:android"specify the Android resource XML namespace at http://schemas.android.com/ apk/res/android. -->
+<!-- "dp" stands for density-independent pixels-->
+<!-- "match_parent" view will be as big as its parent-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -9,7 +12,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.missingbismarcktons.exam_01.LoginActivity">
-
+<!-- "wrap_content" view will be as big as its contents require -->
     <TextView
         android:text="Username"
         android:layout_width="wrap_content"
@@ -23,20 +26,6 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/edPassword"
-        android:layout_marginLeft="37dp"
-        android:layout_marginStart="37dp"
-        android:singleLine="false"
-        android:layout_marginTop="86dp"
-        android:layout_below="@+id/edUsername"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_marginTop="20dp"
@@ -44,18 +33,6 @@
         android:layout_below="@+id/tvUsername"
         android:layout_alignLeft="@+id/tvUsername"
         android:layout_alignStart="@+id/tvUsername" />
-
-    <Button
-        android:text="Log In"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnLogin"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/edPassword"
-        android:layout_alignLeft="@+id/edPassword"
-        android:layout_alignStart="@+id/edPassword"
-        android:layout_alignRight="@+id/edPassword"
-        android:layout_alignEnd="@+id/edPassword" />
 
     <TextView
         android:text="Password"
@@ -66,5 +43,32 @@
         android:layout_below="@+id/edUsername"
         android:layout_alignLeft="@+id/edPassword"
         android:layout_alignStart="@+id/edPassword" />
+
+    <Button
+        android:text="Log In"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogin"
+        android:layout_below="@+id/edPassword"
+        android:layout_alignLeft="@+id/edPassword"
+        android:layout_alignStart="@+id/edPassword"
+        android:layout_marginTop="36dp"
+        android:layout_alignRight="@+id/edUsername"
+        android:layout_alignEnd="@+id/edUsername"
+        android:background="@color/colorPrimary"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/edPassword"
+        android:layout_marginLeft="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/tvPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

@@ -1,10 +1,7 @@
 package com.missingbismarcktons.exam_01;
 
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
-import android.view.MenuItem;
 import android.widget.Button;
 import android.view.View;
 
@@ -45,8 +42,5 @@ public class MainActivity extends BaseActivity{
 
         Intent intent = this.getIntent();
         setTitle(intent.getStringExtra("id"));
-    }
-    public int getLayoutResource(){
-        return R.layout.activity_main;
     }
 }

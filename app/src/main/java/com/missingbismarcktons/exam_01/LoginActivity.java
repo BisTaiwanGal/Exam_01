@@ -1,14 +1,16 @@
 package com.missingbismarcktons.exam_01;
-import android.view.Gravity;
-import android.view.View;
+
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.os.Bundle;
+
+//Every widget is an instance of the View class or one of its subclasses (such as TextView or Button
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.content.Intent;
 import android.widget.Toast;
-
+import android.content.Intent;
+import android.view.Gravity;
 
 public class LoginActivity extends AppCompatActivity {
     private EditText edUsername, edPassword;
@@ -18,9 +20,11 @@ public class LoginActivity extends AppCompatActivity {
     //The onCreate(Bundle) method is called when an instance of the activity subclass is created
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // You tell the Dalvik VM to run your code in addition to the existing code in the onCreate() of the parent class.
         super.onCreate(savedInstanceState);
         //This method inflates a layout and puts it on screen. each widget in the layout file is instantiated as defined by its attributes.
         setContentView(R.layout.activity_login);
+        setTitle("Welcome!");
 
         // must cast the returned View to specified one
         edUsername = (EditText) findViewById(R.id.edUsername);

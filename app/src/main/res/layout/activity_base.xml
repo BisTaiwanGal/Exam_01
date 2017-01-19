@@ -9,35 +9,40 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.missingbismarcktons.exam_01.Product">
-    <Button
-        android:text="動作二 : 無"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btnAction1"
-        android:layout_alignLeft="@+id/btnAction1"
-        android:layout_alignStart="@+id/btnAction1"
-        android:layout_marginTop="69dp"
-        android:id="@+id/btnAction2" />
 
-    <TextView
-        android:text="文字框"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tv"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="69dp"
-        android:layout_alignRight="@+id/btnAction2"
-        android:layout_alignEnd="@+id/btnAction2" />
+        android:layout_alignParentStart="true">
 
-    <Button
-        android:text="動作一 : 顯示alertDialog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="118dp"
-        android:id="@+id/btnAction1"
-        android:layout_below="@+id/tv"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:text="文字框"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:id="@+id/tv"
+            android:layout_marginTop="50dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <Button
+            android:text="動作一 : "
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/btnAction1"
+            android:background="@color/colorPrimary" />
+
+        <Button
+            android:text="動作二 : "
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnAction2"
+            android:background="@color/colorPrimary" />
+
+    </LinearLayout>
+
 </RelativeLayout>

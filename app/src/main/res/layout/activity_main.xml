@@ -12,32 +12,34 @@
 
     <Button
         android:text="Profile"
-        android:layout_width="wrap_content"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:id="@+id/btnProfile"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginLeft="107dp"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="115dp"
-        android:id="@+id/btnProfile" />
+        android:background="@color/colorPrimary" />
 
     <Button
         android:text="Product"
-        android:layout_width="wrap_content"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/btnProfile"
-        android:layout_alignStart="@+id/btnProfile"
-        android:id="@+id/btnProduct" />
+        android:id="@+id/btnProduct"
+        android:layout_below="@+id/btnProfile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:background="@color/colorPrimary" />
 
     <Button
         android:text="Message"
-        android:layout_width="wrap_content"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
+        android:id="@+id/btnMessage"
+        android:layout_marginTop="13dp"
         android:layout_below="@+id/btnProduct"
-        android:layout_alignLeft="@+id/btnProduct"
-        android:layout_alignStart="@+id/btnProduct"
-        android:layout_marginTop="60dp"
-        android:id="@+id/btnMessage" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/colorPrimary"/>
 </RelativeLayout>
